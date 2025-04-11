@@ -1,0 +1,62 @@
+body {
+    display: flex;
+    flex-direction: column; /* Меняем направление, чтобы текст был под сердцем */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+#heart {
+    position: relative;
+    width: 200px; /* Ширина */
+    height: 200px; /* Высота */
+    background-color: #e63946; /* Цвет сердца */
+    transform: rotate(-45deg);
+    margin: 20px; /* Отступ */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Тень для объема */
+    animation: rotate 4s linear infinite; /* Анимация вращения */
+    transition: transform 0.2s; /* Плавный переход для пульсации */
+}
+
+#heart:before,
+#heart:after {
+    content: '';
+    position: absolute;
+    width: 200px; /* Ширина */
+    height: 200px; /* Высота */
+    background-color: #e63946; /* Цвет сердца */
+    border-radius: 50%;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Тень для объема */
+}
+
+#heart:before {
+    top: -100px; /* Отступ, чтобы сердечко оставалось целым */
+    left: 0;
+}
+
+#heart:after {
+    left: 100px; /* Отступ, чтобы сердечко оставалось целым */
+    top: 0;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(-45deg);
+    }
+    100% {
+        transform: rotate(315deg); /* Завершаем вращение */
+    }
+}
+
+#heart:hover {
+    transform: scale(1.1); /* Увеличение при наведении */
+}
+
+#message {
+    font-size: 24px; /* Размер текста */
+    color: #ff1493; /* Цвет текста (можете изменить по желанию) */
+    text-align: center; /* Центрируем текст */
+    margin-top: 20px; /* Отступ сверху для отделения от сердца */
+}
