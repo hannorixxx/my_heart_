@@ -17,7 +17,7 @@ body {
     margin: 20px; /* Отступ */
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Тень для объема */
     animation: rotate 4s linear infinite; /* Анимация вращения */
-    transition: transform 0.2s; /* Плавный переход для пульсации */
+    transition: transform 0.2s; /* Переход для плавной пульсации */
 }
 
 #heart:before,
@@ -43,7 +43,7 @@ body {
 
 @keyframes rotate {
     0% {
-        transform: rotate(-45deg);
+        transform: rotate(-120deg);
     }
     100% {
         transform: rotate(315deg); /* Завершаем вращение */
